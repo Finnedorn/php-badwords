@@ -1,10 +1,12 @@
 <?php
     $text = $_GET['testo'];
     $censorship = $_GET['censura'];
+    $count = null;
     $textCensured = str_replace(
         $censorship,
         '***',
         $text,
+        $count
     );
 
 ?>
@@ -21,17 +23,18 @@
         <h1>
             Ecco il tuo testo!
         </h1>
-        <h6>
+        <h2 class="py-2">
             <?php
             if(str_contains($text, 'gattino')) {
                 echo "(ノಠ益ಠ)ノ彡┻━┻ ti avevo detto di non scrivere gattino !!!";
-            } else if(str_contains($text, $censorship)) {
-                echo "il tuo testo è stato censurato! (Θ︹Θ)ს";
             }
             ?>
-        </h6>
-        <p>
-            <?php echo $textCensured. strlen($textCensured) ?>
+        </h2>
+        <span>
+            Abbiamo riscontrato ben <?php echo $count ?> caratteri censurati ∑(O_O;)
+        </span>
+        <p class="my-5">
+            <?php echo $textCensured ?>
         </p>
         <h6>
             lunghezza del paragrafo: <?php echo strlen($textCensured) ?> caratteri!
