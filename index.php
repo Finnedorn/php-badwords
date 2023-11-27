@@ -10,10 +10,12 @@
         <h1>
             Il tuo Testo è importante per noi!
         </h1>
-        <h6>
-            (evita l'uso di parole improprie come: gattino o Lorem)
-        </h6>
-        <form action="censura.php" method="GET" class="d-flex flex-column align-items-center w-25 m-auto pt-3 ">
+        <form action="censura.php" method="GET" class="d-flex flex-column align-items-center m-auto pt-3 ">
+            <h6>
+                (evita l'uso di parole improprie come: gattino o 
+                <input type="text" name="censura" placeholder=" es: barbone.." class="my-2" style="width: 150px">
+                )
+            </h6>
             <textarea cols="50" rows="10" placeholder=" Inserisci qui il tuo testo..." type="text" name="testo"></textarea>
             <button type="submit" class="mt-3">Invia</button>
         </form>
