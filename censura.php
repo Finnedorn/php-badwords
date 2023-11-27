@@ -31,13 +31,13 @@
             ?>
         </h2>
         <span>
-            Abbiamo riscontrato ben <?php echo $count ?> caratteri censurati ∑(O_O;)
+            Abbiamo riscontrato ben <?php echo $count ?> parole censurate ∑(O_O;)
         </span>
         <p class="my-5">
             <?php echo $textCensured ?>
         </p>
         <h6>
-            lunghezza del paragrafo: <?php echo strlen($textCensured) ?> caratteri!
+            lunghezza del paragrafo: <?php echo str_word_count($text) ?> parole
         </h6>
         <a href="./index.php">Prova di nuovo</a>
     </header>
