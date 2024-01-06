@@ -8,7 +8,6 @@
         $text,
         $count
     );
-
 ?>
 
 <html lang="en">
@@ -23,7 +22,7 @@
         <h1>
             Ecco il tuo testo!
         </h1>
-        <h2 class="py-2">
+        <h2 class="py-2 text-danger">
             <?php
             if(str_contains($text, 'gattino')) {
                 echo "(ノಠ益ಠ)ノ彡┻━┻ ti avevo detto di non scrivere gattino !!!";
